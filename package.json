@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/contentstack/kickstart-nuxt"
   },
-  "description": "Contentstack Kickstarts are the minimum amount of code needed to connect to Contentstack.",
+  "description": "Contentstack Kickstarts are the minimum amount of code needed to connect to Contentstack to Nuxt.",
   "author": "Tim Benniks <tim.benniks@contentstack.com>",
   "annotation": "Lo Etheridge <lo.etheridge@contentstack.com>",
   "homepage": "https://contentstack.com",
