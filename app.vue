@@ -137,7 +137,11 @@ onMounted(() => {
   </main>
 </template>
 
-<style>
+<style lang="css">
+/**
+ * Base styles for the application
+ * These styles apply to the entire application
+ */
 body {
   background: #e9e9e9;
 }
