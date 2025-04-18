@@ -1,3 +1,21 @@
+/**
+ * Contentstack Delivery SDK plugin
+ * 
+ * This plugin initializes the Contentstack Delivery SDK and Live Preview functionality
+ * Key Features:
+ * 1. Sets up the Contentstack stack instance with provided configuration
+ * 2. Configures live preview with edit button functionality
+ * 3. Provides the stack instance and preview utilities to the application
+ * 
+ * Configuration is loaded from the Nuxt public config and includes:
+ * - API Key
+ * - Delivery Token
+ * - Preview Token
+ * - Region
+ * - Environment
+ * - Preview mode flag
+ */
+
 import contentstack, { Region } from "@contentstack/delivery-sdk"
 import ContentstackLivePreview, { type IStackSdk } from "@contentstack/live-preview-utils";
 import { getContentstackEndpoints, getRegionForString } from "@timbenniks/contentstack-endpoints";
