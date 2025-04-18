@@ -44,7 +44,7 @@ onMounted(() => {
       <!-- Page title with live preview binding -->
       <h1
         v-if="page?.title"
-        class="text-4xl font-bold mb-4"
+        class="text-4xl font-bold mb-4 text-center"
         v-bind="page?.$ && page?.$.title"
       >
         {{ page?.title }} with Nuxt
@@ -53,7 +53,7 @@ onMounted(() => {
       <!-- Page description with live preview binding -->
       <p
         v-if="page?.description"
-        class="mb-4"
+        class="mb-4 text-center"
         v-bind="page?.$ && page?.$.description"
       >
         {{ page?.description }}
