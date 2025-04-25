@@ -27,14 +27,13 @@ export const useGetPage = async (url: string) => {
     // Get the Nuxt app instance and the current route
     const { $preview, $stack } = useNuxtApp()
     const route = useRoute()
-    const qs = toRaw(route.query) // Convert the route query to a raw object
+    const qs = { ...toRaw(route.query) } // Convert the route query to a raw object
 
     // Check if preview mode is enabled and if live preview query parameter is present
     if ($preview && qs?.live_preview) {
-      const route = useRoute() // Get the current route again
-      const qs = toRaw(route.query)
       $stack.livePreviewQuery(qs as unknown as LivePreviewQuery) // Convert the route query to a raw object again
     }
+
     // Fetch the page data from Contentstack
     const result = await $stack
       .contentType("page") // Specify the content type as 'page'
@@ -46,7 +45,7 @@ export const useGetPage = async (url: string) => {
     // Check if there are any entries in the result
     if (result.entries) {
       const entry = result.entries[0] // Get the first entry from the result
-        // If preview mode is enabled, add editable tags to the entry
+      // If preview mode is enabled, add editable tags to the entry
       if ($preview) {
         contentstack.Utils.addEditableTags(entry as Page, 'page', true);
       }
