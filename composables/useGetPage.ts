@@ -26,6 +26,13 @@ export const useGetPage = async (url: string) => {
   const { data, status, refresh } = await useAsyncData(`page-${url}`, async () => {
     // Get the Nuxt app instance and the current route
     const { $preview, $stack } = useNuxtApp()
+    const route = useRoute()
+    const qs = { ...toRaw(route.query) } // Convert the route query to a raw object
+
+    // Check if preview mode is enabled and if live preview query parameter is present
+    if ($preview && qs?.live_preview) {
+      $stack.livePreviewQuery(qs as unknown as LivePreviewQuery) // Convert the route query to a raw object again
+    }
 
     // Fetch the page data from Contentstack
     const result = await $stack
