@@ -19,6 +19,12 @@ export default defineNuxtConfig({
       region: process.env.NUXT_CONTENTSTACK_REGION,
     },
   },
+  nitro: {
+    prerender: {
+      crawlLinks: false,
+      routes: ["/about", "/contact"],
+    },
+  },
   routeRules: {
     // Server-Side Rendering (SSR) - Dynamic content, real-time data
     '/': { ssr: true },
