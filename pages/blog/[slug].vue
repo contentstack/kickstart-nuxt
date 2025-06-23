@@ -70,7 +70,7 @@
       <footer class="mt-12 pt-8 border-t border-gray-200">
         <div class="flex items-center justify-between">
           <div class="text-sm text-gray-500">
-            <p>Last updated: {{ lastUpdated }}</p>
+            <p>Last updated: {{ timedatavar }}</p>
             <p>Rendering: Incremental Static Regeneration</p>
           </div>
           
@@ -307,7 +307,9 @@ const relatedPosts = computed(() => {
 })
 
 // Simulate last updated time
-const lastUpdated = new Date().toLocaleString()
+// const lastUpdated = new Date().toLocaleString()
+const { timedata } = await useFetch('/api/data')
+const timedatavar = timedata.value.timestamp;
 
 // Update page title when post is found
 watchEffect(() => {

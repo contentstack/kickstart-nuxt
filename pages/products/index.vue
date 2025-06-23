@@ -19,7 +19,7 @@
         inventory levels, and pricing. Perfect for e-commerce applications.
       </p>
       <div class="text-sm text-green-700">
-        <p><strong>Last updated:</strong> {{ lastUpdated }}</p>
+        <p><strong>Last updated:</strong> {{ timedatavar }}</p>
         <p><strong>Rendering strategy:</strong> Server-Side Rendering</p>
         <p><strong>Data freshness:</strong> Real-time</p>
       </div>
@@ -320,7 +320,9 @@ const featuredCategories = [
 ]
 
 // Simulate last updated time (demonstrates SSR)
-const lastUpdated = new Date().toLocaleString()
+// const lastUpdated = new Date().toLocaleString()
+const { timedata } = await useFetch('/api/data')
+const timedatavar = timedata.value.timestamp;
 
 // Filtered and sorted products
 const filteredProducts = computed(() => {

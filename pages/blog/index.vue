@@ -19,7 +19,7 @@
         The page is statically generated but can be regenerated in the background when content changes.
       </p>
       <div class="text-sm text-purple-700">
-        <p><strong>Last updated:</strong> {{ lastUpdated }}</p>
+        <p><strong>Last updated:</strong> {{ timedatavar }}</p>
         <p><strong>Rendering strategy:</strong> Incremental Static Regeneration</p>
         <p><strong>Regeneration interval:</strong> 60 seconds</p>
       </div>
@@ -205,7 +205,9 @@ const categories = ['All', 'Nuxt 3', 'Vue.js', 'Performance', 'CMS', 'Tutorial',
 const selectedCategory = ref(null)
 
 // Simulate last updated time (in a real app, this would come from the CMS)
-const lastUpdated = new Date().toLocaleString()
+// const lastUpdated = new Date().toLocaleString()
+const { timedata } = await useFetch('/api/data')
+const timedatavar = timedata.value.timestamp;
 
 // Filter posts by category
 const filteredPosts = computed(() => {
