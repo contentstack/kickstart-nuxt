@@ -321,8 +321,8 @@ const featuredCategories = [
 
 // Simulate last updated time (demonstrates SSR)
 // const lastUpdated = new Date().toLocaleString()
-const { timedata } = await useFetch('/api/data')
-const timedatavar = timedata.value.timestamp;
+const { data } = await useFetch('/api/data')
+const timedatavar = data.value.timestamp;
 
 // Filtered and sorted products
 const filteredProducts = computed(() => {

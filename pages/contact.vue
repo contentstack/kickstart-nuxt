@@ -19,7 +19,7 @@
         making it load instantly and providing excellent SEO performance.
       </p>
       <div class="text-sm text-blue-700">
-        <p><strong>Build time:</strong> {{ timedatavar }}</p>
+        <p><strong>Build time:</strong> {{ time }}</p>
         <p><strong>Rendering strategy:</strong> Static Site Generation</p>
         <p><strong>Loading speed:</strong> Instant</p>
       </div>
@@ -323,8 +323,8 @@ const showSuccess = ref(false)
 
 // Static data - this content is embedded at build time
 // const buildTime = new Date().toLocaleString()
-const { timedata } = await useFetch('/api/data')
-const timedatavar = timedata.value.timestamp;
+const { data } = await useFetch('/api/data')
+  const time = data.value.timestamp
 
 // Handle form submission
 const handleSubmit = async () => {
@@ -347,4 +347,7 @@ const handleSubmit = async () => {
     newsletter: false
   }
 }
+definePageMeta({
+  prerender: true
+})
 </script> 

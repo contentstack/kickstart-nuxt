@@ -206,8 +206,8 @@ const selectedCategory = ref(null)
 
 // Simulate last updated time (in a real app, this would come from the CMS)
 // const lastUpdated = new Date().toLocaleString()
-const { timedata } = await useFetch('/api/data')
-const timedatavar = timedata.value.timestamp;
+const { data } = await useFetch('/api/data')
+const timedatavar = data.value.timestamp;
 
 // Filter posts by category
 const filteredPosts = computed(() => {

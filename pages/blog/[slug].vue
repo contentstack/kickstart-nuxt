@@ -308,8 +308,8 @@ const relatedPosts = computed(() => {
 
 // Simulate last updated time
 // const lastUpdated = new Date().toLocaleString()
-const { timedata } = await useFetch('/api/data')
-const timedatavar = timedata.value.timestamp;
+const { data } = await useFetch('/api/data')
+const timedatavar = data.value.timestamp;
 
 // Update page title when post is found
 watchEffect(() => {

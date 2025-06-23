@@ -154,8 +154,10 @@ useHead({
   ]
 })
 
+definePageMeta({
+  prerender: true
+})
+
 // Static data - this content is embedded at build time
-// const buildTime = new Date().toLocaleString()
-  const { timedata } = await useFetch('/api/data')
-  const timedatavar = timedata.value.timestamp;
+const timedatavar = new Date().toLocaleString()
 </script> 
