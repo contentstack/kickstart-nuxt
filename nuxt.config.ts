@@ -15,10 +15,33 @@ export default defineNuxtConfig({
     public: {
       apiKey: process.env.NUXT_CONTENTSTACK_API_KEY,
       deliveryToken: process.env.NUXT_CONTENTSTACK_DELIVERY_TOKEN,
-      previewToken: process.env.NUXT_CONTENTSTACK_PREVIEW_TOKEN,
       environment: process.env.NUXT_CONTENTSTACK_ENVIRONMENT,
-      preview: process.env.NUXT_CONTENTSTACK_PREVIEW === "true",
       region: process.env.NUXT_CONTENTSTACK_REGION,
     },
   },
-})
+  routeRules: {
+    // Server-Side Rendering (SSR) - Dynamic content, real-time data
+    '/': { ssr: true },
+    '/products': { ssr: true },
+    
+    // Static Site Generation (SSG) - Static content, marketing pages
+    '/about': { prerender: true },
+    '/contact': { prerender: true },
+    
+    // Incremental Static Regeneration (ISR) - Content that changes occasionally
+    '/blog': { 
+      prerender: true,
+      cache: {
+        swr: true,
+        maxAge: 60 // Cache for 60 seconds
+      }
+    },
+    '/blog/**': { 
+      prerender: true,
+      cache: {
+        swr: true,
+        maxAge: 300 // Cache for 5 minutes for individual posts
+      }
+    }
+  }
+}) 
