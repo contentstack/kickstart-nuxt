@@ -47,6 +47,8 @@ export default defineNuxtConfig({
          "Cache-Control":"public, max-age=0, s-maxage=60, stale-while-revalidate=30"
       }
     },
+    // Client-Side Rendering (CSR) - Interactive features, real-time updates
+    '/csr-demo': { ssr: false },
     // Incremental Static Regeneration (ISR) - Content that changes occasionally
     '/blog': { 
       isr:30,

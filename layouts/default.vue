@@ -46,6 +46,13 @@
             >
               Contact (SSG)
             </NuxtLink>
+            <NuxtLink 
+              to="/csr-demo" 
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              active-class="text-blue-600 bg-blue-50"
+            >
+              CSR Demo
+            </NuxtLink>
           </div>
 
           <!-- Mobile menu button -->
@@ -104,6 +111,14 @@
               @click="mobileMenuOpen = false"
             >
               Contact (SSG)
+            </NuxtLink>
+            <NuxtLink 
+              to="/csr-demo" 
+              class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              active-class="text-blue-600 bg-blue-50"
+              @click="mobileMenuOpen = false"
+            >
+              CSR Demo
             </NuxtLink>
           </div>
         </div>
