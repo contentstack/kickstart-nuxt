@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: false,
-      routes: ["/about", "/contact"],
+      routes: ["/about", "/contact","/prerender-demo"],
     },
   },
   routeRules: {
@@ -35,6 +35,13 @@ export default defineNuxtConfig({
     '/about': { prerender: true },
     '/contact': { prerender: true },
     
+    '/ssr-demo': { ssr: true },
+    '/isr-demo':{
+      isr: 60,
+      headers:{
+         "Cache-Control":"public, max-age=0, s-maxage=60, stale-while-revalidate=30"
+      }
+    },
     // Incremental Static Regeneration (ISR) - Content that changes occasionally
     '/blog': { 
       prerender: true,

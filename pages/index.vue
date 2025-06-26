@@ -22,6 +22,24 @@
           >
             View Products
           </NuxtLink>
+          <NuxtLink 
+            to="/ssr-demo" 
+            class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            SSR-demo
+          </NuxtLink>
+          <NuxtLink 
+            to="/isr-demo" 
+            class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            ISR-demo
+          </NuxtLink>
+          <NuxtLink 
+            to="/prerender-demo" 
+            class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            Prerender-demo
+          </NuxtLink>
         </div>
       </div>
     </div>
