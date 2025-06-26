@@ -53,13 +53,6 @@ export default defineNuxtConfig({
       headers:{
         "Cache-Control":"public, max-age=0, s-maxage=30, stale-while-revalidate=30"
      }
-    },
-    '/blog/**': { 
-      prerender: true,
-      cache: {
-        swr: true,
-        maxAge: 300 // Cache for 5 minutes for individual posts
-      }
     }
   }
 }) 

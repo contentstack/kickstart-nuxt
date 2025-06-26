@@ -21,7 +21,7 @@
       <div class="text-sm text-purple-700">
         <p><strong>Last updated:</strong> {{ timedatavar }}</p>
         <p><strong>Rendering strategy:</strong> Incremental Static Regeneration</p>
-        <p><strong>Regeneration interval:</strong> 60 seconds</p>
+        <p><strong>Regeneration interval:</strong> 30 seconds</p>
       </div>
     </div>
 
