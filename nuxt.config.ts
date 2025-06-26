@@ -29,13 +29,18 @@ export default defineNuxtConfig({
   routeRules: {
     // Server-Side Rendering (SSR) - Dynamic content, real-time data
     '/': { ssr: true },
-    '/products': { ssr: true },
+    '/products': { ssr: true,
+      headers:{
+      "Cache-Control":"no-store"
+    } },
     
     // Static Site Generation (SSG) - Static content, marketing pages
     '/about': { prerender: true },
     '/contact': { prerender: true },
     
-    '/ssr-demo': { ssr: true },
+    '/ssr-demo': { ssr: true , headers:{
+      "Cache-Control":"no-store"
+    }},
     '/isr-demo':{
       isr: 60,
       headers:{
@@ -44,11 +49,10 @@ export default defineNuxtConfig({
     },
     // Incremental Static Regeneration (ISR) - Content that changes occasionally
     '/blog': { 
-      prerender: true,
-      cache: {
-        swr: true,
-        maxAge: 60 // Cache for 60 seconds
-      }
+      isr:30,
+      headers:{
+        "Cache-Control":"public, max-age=0, s-maxage=30, stale-while-revalidate=30"
+     }
     },
     '/blog/**': { 
       prerender: true,

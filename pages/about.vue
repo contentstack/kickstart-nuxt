@@ -159,5 +159,6 @@ definePageMeta({
 })
 
 // Static data - this content is embedded at build time
-const timedatavar = new Date().toLocaleString()
+const { data } = await useFetch('/api/data')
+const timedatavar = data.value.timestamp
 </script> 
