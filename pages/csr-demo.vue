@@ -194,8 +194,11 @@ const quotes = [
 
 // Simulate client-side loading
 onMounted(() => {
+  console.log('🔄 CSR: Component mounted, starting client-side rendering...')
+  
   // Simulate loading delay
   setTimeout(() => {
+    console.log('✅ CSR: Content loaded and rendered on client-side')
     isLoaded.value = true
     clientRenderTime.value = new Date().toLocaleString()
     
