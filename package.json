@@ -23,7 +23,7 @@
     "@contentstack/live-preview-utils": "^3.2.4",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@timbenniks/contentstack-endpoints": "^1.0.10",
-    "nuxt": "^3.17.5",
+    "nuxt": "^4.0.2",
     "vue": "latest",
     "vue-router": "latest"
   },
