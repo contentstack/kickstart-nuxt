@@ -18,7 +18,7 @@
  */
 
 import contentstack, { QueryOperation, type LivePreviewQuery } from "@contentstack/delivery-sdk"; // Imports from the Contentstack Content Delivery SDK
-import type { Page } from "~/types"; // Import the Page type from the types file
+import type { Page } from "../../types"; // Import the Page type from the types file
 
 // Define an asynchronous function to fetch page data based on the URL
 export const useGetPage = async (url: string) => {
