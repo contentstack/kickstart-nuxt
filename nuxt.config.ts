@@ -7,17 +7,8 @@ const endpoints = getContentstackEndpoints(region, true)
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-
-  future: {
-    compatibilityVersion: 4,
-  },
-
   modules: ['@nuxtjs/tailwindcss'],
-  build: {
-    transpile: ['@timbenniks/contentstack-endpoints']
-  },
   runtimeConfig: {
-
     // Certain API endpoints can be set via environment variables for internal testing at Contentstack
     // You can omit in your project. Use @timbenniks/contentstack-endpoints to get the right urls for your region.
     public: {
