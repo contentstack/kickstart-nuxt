@@ -24,7 +24,7 @@
     "@nuxt/image": "^2.0.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@timbenniks/contentstack-endpoints": "^2.1.0",
-    "nuxt": "^4.3.0",
+    "nuxt": "^4.3.1",
     "nuxt-contentstack": "^0.1.10",
     "vue": "^3.5.27",
     "vue-router": "^5.0.1"
