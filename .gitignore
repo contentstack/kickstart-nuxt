@@ -29,3 +29,5 @@ logs
 # Tree maker
 tree-maker
 
+
+.early.coverage
