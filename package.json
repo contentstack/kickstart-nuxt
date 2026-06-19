@@ -39,5 +39,9 @@
   },
   "devDependencies": {
     "@types/node": "^24.13.2"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.62.0",
+    "@rollup/rollup-linux-x64-musl": "^4.62.0"
   }
 }
