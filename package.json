@@ -1,6 +1,6 @@
 {
   "name": "kickstart-nuxt",
-  "version": "1.0.13",
+  "version": "1.1.0",
   "private": false,
   "repository": {
     "type": "git",
@@ -28,16 +28,16 @@
   },
   "dependencies": {
     "@contentstack/delivery-sdk": "^5.2.1",
-    "@contentstack/live-preview-utils": "^4.4.3",
+    "@contentstack/live-preview-utils": "^4.4.4",
     "@contentstack/utils": "^1.9.1",
     "@nuxt/image": "^2.0.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
-    "nuxt": "^4.4.7",
+    "nuxt": "^4.4.8",
     "nuxt-contentstack": "^0.1.17",
-    "vue": "^3.5.35",
+    "vue": "^3.5.38",
     "vue-router": "^5.1.0"
   },
   "devDependencies": {
-    "@types/node": "^24.12.4"
+    "@types/node": "^24.13.2"
   }
 }
