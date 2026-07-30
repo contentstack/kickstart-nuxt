@@ -24,7 +24,8 @@
     "brace-expansion": "5.0.7",
     "devalue": "5.8.2",
     "qs": "6.15.3",
-    "glob": "11.1.0"
+    "glob": "11.1.0",
+    "sharp": "0.35.3"
   },
   "dependencies": {
     "@contentstack/delivery-sdk": "^5.4.0",
