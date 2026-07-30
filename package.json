@@ -42,7 +42,7 @@
     "@types/node": "^25.9.5"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.62.2",
-    "@rollup/rollup-linux-x64-musl": "^4.62.2"
+    "@rollup/rollup-linux-x64-gnu": "4.62.2",
+    "@rollup/rollup-linux-x64-musl": "4.62.2"
   }
 }
